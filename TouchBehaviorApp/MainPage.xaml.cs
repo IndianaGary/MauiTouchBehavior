@@ -17,7 +17,7 @@ public partial class MainPage : ContentPage
     {
         if ( sender is Label label )
         {
-            if ( label.Behaviors.First() is TouchBehavior behavior )
+            if ( _behavior is null && label.Behaviors.First() is TouchBehavior behavior )
             { 
                 _captured = behavior.Capture;
                 _behavior = behavior;
@@ -58,12 +58,14 @@ public partial class MainPage : ContentPage
                     case TouchActionType.Exited:
                     {
                         label.Text = "I handle Touch actions! Click or hover!";
+                        _behavior = null;
                         return;
                     }
 
                     case TouchActionType.Cancelled:
                     {
                         sb.AppendLine( "Cancelled: " );
+                        _behavior = null;
                         break;
                     }
 

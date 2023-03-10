@@ -18,8 +18,10 @@
                    HorizontalOptions="Center"
                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
                    Source="dotnet_bot.png" />
-            <Border>
-                <Label FontSize="32"
+            <Border WidthRequest="500">
+                <Label WidthRequest="500"
+                       Padding="10"
+                       FontSize="32"
                        HorizontalOptions="Center"
                        LineHeight="2"
                        SemanticProperties.HeadingLevel="Level1"
