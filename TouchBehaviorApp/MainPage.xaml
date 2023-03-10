@@ -18,8 +18,10 @@
                    HorizontalOptions="Center"
                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
                    Source="dotnet_bot.png" />
-            <Border WidthRequest="500">
-                <Label WidthRequest="500"
+            <Border WidthRequest="{OnPlatform 500,
+                                              Android=300}">
+                <Label WidthRequest="{OnPlatform 500,
+                                                 Android=300}"
                        Padding="10"
                        FontSize="32"
                        HorizontalOptions="Center"
